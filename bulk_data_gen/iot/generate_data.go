@@ -25,7 +25,7 @@ func (d *IotSimulatorConfig) ToSimulator() *IotSimulator {
 	}
 
 	epochs := d.End.Sub(d.Start).Nanoseconds() / EpochDuration.Nanoseconds()
-	maxPoints := epochs * measNum
+	maxPoints := 50 * epochs * measNum
 	dg := &IotSimulator{
 		madePoints: 0,
 		madeValues: 0,

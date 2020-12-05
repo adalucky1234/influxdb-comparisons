@@ -55,7 +55,7 @@ func (d *DashboardSimulatorConfig) ToSimulator() *DashboardSimulator {
 	}
 
 	epochs := d.End.Sub(d.Start).Nanoseconds() / devops.EpochDuration.Nanoseconds()
-	maxPoints := epochs * (d.HostCount * NHostSims)
+	maxPoints := 50 * epochs * (d.HostCount * NHostSims)
 	dg := &DashboardSimulator{
 		madePoints: 0,
 		madeValues: 0,

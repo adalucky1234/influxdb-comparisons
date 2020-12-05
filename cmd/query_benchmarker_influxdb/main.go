@@ -9,8 +9,8 @@ import (
 	"encoding/gob"
 	"flag"
 	"fmt"
-	"github.com/influxdata/influxdb-comparisons/bulk_query"
-	"github.com/influxdata/influxdb-comparisons/bulk_query/http"
+	"../../bulk_query"
+	"../../bulk_query/http"
 	"github.com/influxdata/influxdb-comparisons/util/report"
 	"io"
 	"log"
@@ -242,7 +242,7 @@ func (b *InfluxQueryBenchmarker) processSingleQuery(w http.HTTPClient, q *http.Q
 	statChan <- stat
 	b.queryPool.Put(q)
 	if err != nil {
-		qerr := fmt.Errorf("Error during request of query %s: %s\n", q.String(), err.Error())
+		qerr := fmt.Errorf("!!!!!Error during request of query %s: %s\n", q.String(), err.Error())
 		if errCh != nil {
 			errCh <- qerr
 			return nil

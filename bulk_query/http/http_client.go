@@ -51,9 +51,9 @@ func (w *DefaultHTTPClient) Do(q *Query, opts *HTTPClientDoOptions) (lag float64
 
 	// populate a request with data from the Query:
 	req, err := http.NewRequest(string(q.Method), string(uri), bytes.NewBuffer(q.Body)) // TODO performance
-	if opts.Authorization != "" {
-		req.Header.Add("Authorization", opts.Authorization)
-	}
+	//if opts.Authorization != "" {
+	req.Header.Add("Authorization", "Token 0LJC3q2eICILlKB9fO0J4-6PlcaK1ryWq3UPkpuXIrYuNUcGCHPa4DW8fElrGKOL4T4bI-iNm0kCCARy_BERSQ==")
+	//}
 
 	start := time.Now()
 	resp, err := w.client.Do(req)

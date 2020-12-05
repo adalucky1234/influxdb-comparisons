@@ -39,7 +39,7 @@ func NewHTTPClient(host string, debug int) *HTTPClient {
 
 // Do performs the action specified by the given Query. It uses fasthttp, and
 // tries to minimize heap allocations.
-func (w *HTTPClient) Do(q *Query, opts *HTTPClientDoOptions) (lag float64, err error) {
+func (w *HTTPClient) Doxxx(q *Query, opts *HTTPClientDoOptions) (lag float64, err error) {
 	// populate uri from the reusable byte slice:
 	w.uri = w.uri[:0]
 	w.uri = append(w.uri, w.host...)

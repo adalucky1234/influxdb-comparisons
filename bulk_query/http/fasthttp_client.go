@@ -58,9 +58,9 @@ func (w *FastHTTPClient) Do(q *Query, opts *HTTPClientDoOptions) (lag float64, e
 	if opts.ContentType != "" {
 		req.Header.SetContentType(opts.ContentType)
 	}
-	if opts.Authorization != "" {
-		req.Header.Add("Authorization", opts.Authorization)
-	}
+	//if opts.Authorization != "" {
+	req.Header.Add("Authorization", "Token 0LJC3q2eICILlKB9fO0J4-6PlcaK1ryWq3UPkpuXIrYuNUcGCHPa4DW8fElrGKOL4T4bI-iNm0kCCARy_BERSQ==")
+	//}
 	req.SetBody(q.Body)
 	// Perform the request while tracking latency:
 	resp := fasthttp.AcquireResponse()

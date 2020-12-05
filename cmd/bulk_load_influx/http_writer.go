@@ -74,6 +74,9 @@ func (w *HTTPWriter) WriteLineProtocol(body []byte, isGzip bool) (int64, error) 
 	req.Header.SetContentTypeBytes(textPlain)
 	req.Header.SetMethodBytes(post)
 	req.Header.SetRequestURIBytes(w.url)
+	fmt.Errorf("SETTINGS AUTH TOKEN!!!!!!")
+	fmt.Println("SETTINGS AUTH TOKEN!!!!!!")
+	req.Header.Set("Authorization", "Token 0LJC3q2eICILlKB9fO0J4-6PlcaK1ryWq3UPkpuXIrYuNUcGCHPa4DW8fElrGKOL4T4bI-iNm0kCCARy_BERSQ==")
 	if isGzip {
 		req.Header.Add("Content-Encoding", "gzip")
 	}

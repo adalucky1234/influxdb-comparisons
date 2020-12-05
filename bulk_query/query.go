@@ -596,7 +596,9 @@ func (q *QueryBenchmarker) processStats(telemetrySink chan *report.Point) {
 			}
 		}
 		// print stats to stderr (if printInterval is greater than zero):
+		//fmt.Println("DDDDDDDDD i %d", i)
 		if q.printInterval > 0 && i > 0 && i%q.printInterval == 0 && (int64(i) < q.limit || q.limit < 0) {
+			//fmt.Println("DDDDDDDDD q.limit %d", q.limit)
 			_, err := fmt.Fprintf(os.Stderr, "%s: after %d queries with %d workers:\n", time.Now().String(), i-q.burnIn, q.workers)
 			if err != nil {
 				log.Fatal(err)

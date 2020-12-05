@@ -40,7 +40,7 @@ type HLQueryExecutorDoOptions struct {
 // Do takes a high-level query, constructs a query plan using the client-side
 // index contained within the query executor, executes that query plan, then
 // aggregates the results.
-func (qe *HLQueryExecutor) Do(q *HLQuery, opts HLQueryExecutorDoOptions) (qpLagMs, requestLagMs float64, err error) {
+func (qe *HLQueryExecutor) Doxxxx(q *HLQuery, opts HLQueryExecutorDoOptions) (qpLagMs, requestLagMs float64, err error) {
 	if opts.Debug >= 1 {
 		fmt.Printf("[hlqe] Do: %s\n", q)
 	}
